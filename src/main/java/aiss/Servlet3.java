@@ -25,6 +25,8 @@ public class Servlet3 extends HttpServlet {
 		Map<String,Contact> contacts = repository.getContacts();
 
 		// TODO: Forward to contacts.jsp
+		request.setAttribute("contacts", contacts);
+		request.getRequestDispatcher("contacts.jsp").forward(request, response);
 
 	}
 
